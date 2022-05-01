@@ -17,7 +17,7 @@ def osmr(origin_longitude,origin_latitude,destination_longitude,destination_lati
     return {"distance":distance,"duration":duration}
 
 def google(origin_longitude,origin_latitude,destination_longitude,destination_latitude):
-    gmaps = googlemaps.Client(key='AIzaSyCvJTbnzdh7y_Fy9iPuwSa3HagvcfBbSpw')
+    gmaps = googlemaps.Client(key='')
     my_dist = gmaps.distance_matrix([str(origin_latitude) + " " + str(origin_longitude)],
                                     [str(destination_latitude) + " " + str(destination_longitude)], mode='transit')
     check = my_dist.get("rows")[0].get("elements")[0].get("status")
